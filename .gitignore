@@ -5,6 +5,7 @@
 !.gitignore
 !*.tex
 !*.pdf
+!*.cls
 
 # ...even if they are in subdirectories
 !*/
