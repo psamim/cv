@@ -6,6 +6,7 @@
 !*.tex
 !*.pdf
 !*.cls
+!*.md
 
 # ...even if they are in subdirectories
 !*/
