@@ -9,7 +9,7 @@ jobs:
       - run: pdflatex resume.tex
       - store_artifacts:
           path: /root/project/resume.pdf
-      - run: echo "My CV" > README.md
+      - run: echo "# My CV \n" > README.md
       - run: echo "[Download]($(curl -s https://circleci.com/api/v1.1/project/github/psamim/cv/latest/artifacts\?circle-token\=$TOKEN|jq -r '.[0].url'))">>README.md
       - run: echo "[![CircleCI](https://circleci.com/gh/psamim/cv.svg?style=svg)](https://circleci.com/gh/psamim/cv)">>README.md
       - run: git config user.email "psamim@gmail.com"
