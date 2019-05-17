@@ -5,8 +5,10 @@ jobs:
       - image: archlinux/base:latest
     steps:
       - checkout
-      - run: pacman -Syu --noconfirm texlive-core
-      - run: pwd
+      - run: pacman -Syu --noconfirm texlive-core jq curl git
       - run: pdflatex resume.tex
       - store_artifacts:
           path: /root/project/resume.pdf
+      - run: URL=`curl -s https://circleci.com/api/v1.1/project/github/psamim/cv/latest/artifacts\?circle-token\=$TOKEN | jq -r '.[0].url'`
+      # - run: echo $URL>README
+      # - run: git add README && git commit -m 'Update'
