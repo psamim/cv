@@ -5,10 +5,15 @@ jobs:
       - image: archlinux/base:latest
     steps:
       - checkout
-      - run: pacman -Syu --noconfirm texlive-core jq curl git
+      - run: pacman -Syu --noconfirm texlive-core jq curl git openssh
       - run: pdflatex resume.tex
       - store_artifacts:
           path: /root/project/resume.pdf
-      - run: URL=`curl -s https://circleci.com/api/v1.1/project/github/psamim/cv/latest/artifacts\?circle-token\=$TOKEN | jq -r '.[0].url'`
-      # - run: echo $URL>README
-      # - run: git add README && git commit -m 'Update'
+      - run: echo "My CV" > README.md
+      - run: echo "[Download]($(curl -s https://circleci.com/api/v1.1/project/github/psamim/cv/latest/artifacts\?circle-token\=$TOKEN|jq -r '.[0].url'))">>README.md
+      - run: echo "[![CircleCI](https://circleci.com/gh/psamim/cv.svg?style=svg)](https://circleci.com/gh/psamim/cv)">>README.md
+      - run: git config user.email "psamim@gmail.com"
+      - run: git config user.name "CirlceCI"
+      - run: git add README.md && git commit -m 'Update [skip ci]'
+      - run: mkdir -p ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - run: git push origin HEAD:master
