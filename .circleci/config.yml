@@ -6,3 +6,6 @@ jobs:
     steps:
       - checkout
       - run: pacman -Syu --noconfirm texlive-core
+      - run: cd project && pdflatex resume.tex
+      - store_artifacts:
+          path: /root/project/resume.pdf
