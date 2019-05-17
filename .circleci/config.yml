@@ -5,4 +5,4 @@ jobs:
       - image: archlinux/base:latest
     steps:
       - checkout
-      - run: pacman -Syu texlive-core
+      - run: pacman -Syu --noconfirm texlive-core
