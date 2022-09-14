@@ -21,7 +21,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[10pt,a4paper,ragged2e]{altacv}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
@@ -61,7 +61,7 @@
 \renewcommand{\ratingmarker}{\faCircle}
 
 %% sample.bib contains your publications
-\addbibresource{sample.bib}
+% \addbibresource{sample.bib}
 
 \begin{document}
 \name{Samim Pezeshki}
@@ -78,8 +78,8 @@
 %  \homepage{bersam.org}
 %  \twitter{@bersam.k}
  % \faSkype{} {samim.pezeshki}
- % \linkedin{linkedin.com/in/bersam}
-  \github{github.com/psamim} % I'm just making this up though.
+  \linkedin{samim-pezeshki-26399157}
+  \github{psamim} % I'm just making this up though.
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
 
@@ -97,22 +97,23 @@
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{Experience}
 
-\cvevent{Full Stack Developer}{\href{https://globalworkandtravel.com/}{Global Work and Travel}}{2020 -- Present}{Remote}
+\cvevent{Tech Lead}{\href{https://globalworkandtravel.com/}{Global Work and Travel}}{2020 -- Present}{Remote}
 \begin{itemize}
-\item Designed and maintained a micro frontend architecture to let Angular, AngularJS and React to run together to be able to migrate a legacy  project gradually to newer technologies (Single-SPA)
+\item Worked as a tech lead rewriting a legacy customer dashboard while documenting the old flows and assuring a smooth transition (NextJS, Serverless, N8N, LaunchDarkly, Stripe)
+\item Lead and developed a job search platform (GraphQL, NextJS, React Native, Hasura, PostgreSQL, Serverless)
+\item Designed and maintained a micro front-end architecture to let Angular, AngularJS and React to run together to be able to migrate a legacy  project gradually to newer technologies (Single-SPA)
 \item Designed CI/CD processes and pipelines (AWS, Bitbucket, Gitlab, bash, Docker, ESlint, Mocha)
-\item Implemented data-intensive dashboards for monitoring and analysis (NextJS, Typescript, GraphQL)
-\item Designed micro-services and server-less architectures (AWS, REST on Express/Node, GraphQL)
-
+\item Developed data-intensive dashboard for monitoring services and diagrams for visualizing their dependencies (NextJS, D3, Typescript, Gitlab and BitBucket API)
+\item Designed microservices and serverless architectures (AWS, REST on Express/Node, GraphQL)
 \end{itemize}
 
 \divider
 
 \cvevent{Front-End Developer}{\href{https://darkpos.com/}{Dark POS}}{2017 -- 2019}{Remote}
 \begin{itemize}
-\item Planned and implemented a multi-branded testable offline-first progressive web application (ReactJS, Redux, GraphQL, Jest, Electron)
-\item Implemented a system to generate documents as we develop (Python, mkdocs, Docker, Gitlab CI)
-\item Maintained an active large code base with a fully remote team and facilitated the team as the lead developer.
+\item Planned and developed a multi-branded testable offline-first progressive web application (React, Redux, GraphQL, Jest, Electron)
+\item Developed a system to auto-generate documents from multiple codebases (Python, mkdocs, Docker, Gitlab CI/CD)
+\item Maintained an active large code base with a fully remote team and facilitated the team as the lead developer
 \end{itemize}
 
 \divider
@@ -126,17 +127,17 @@
 
 %\divider
 
-\cvevent{SDK Developer}{\href{https://www.clickyab.com/}{Clickyab}}{2016 -- 2017}{Remote}
-\begin{itemize}
-\item Developed Clickyab advertising platform SDK and VAST protocol (Java)
-\end{itemize}
+% \cvevent{SDK Developer}{\href{https://www.clickyab.com/}{Clickyab}}{2016 -- 2017}{Remote}
+% \begin{itemize}
+% \item Developed Clickyab advertising platform SDK and VAST protocol (Java)
+% \end{itemize}
 
-\divider
+% \divider
 
-\cvevent{Mobile and Web developer}{\href{https://karapost.com/}{Karapost}}{2014 -- 2016}{Remote, Tehran,Iran}
+\cvevent{Mobile and Web developer}{\href{https://karapost.com/}{Karapost}}{2014 -- 2016}{Remote}
 \begin{itemize}
 \item Developed mobile and web applications for automating different business
-  routines inside company (ReactJS, ReactNative)
+  routines inside company (React, React Native)
 \item Developed nation-wide monitoring platform for tracking the postal packages and informing customers
 \end{itemize}
  
@@ -145,7 +146,7 @@
 \cvevent{Full-stack Web Developer}{\href{https://jooyeshgar.com/}{Jooyeshgar}}{2013 -- 2014}{Esfahan, Iran}
 \begin{itemize}
 \item Developed CRM and financial reporting platform, from data entry
-  to data warehouse. (PHP, MySQL)
+  to data warehouse (PHP, MySQL)
 \item Developed web-based accounting solutions for connecting nation-wide companies.
 \end{itemize} 
 
